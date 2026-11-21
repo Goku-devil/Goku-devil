@@ -1,0 +1,177 @@
+<svg width="372" height="108" viewBox="0 -12 124 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    
+    <clipPath id="typing-clip">
+      <rect x="0" y="0" width="0" height="12" class="type-mask" />
+    </clipPath>
+  </defs>
+
+  <style>
+    /* 1. /home/ Typing Animation */
+    .type-mask {
+      animation: typing 0.75s steps(6, end) 0.1s forwards;
+    }
+
+    .cursor {
+      opacity: 0;
+      animation:
+        cursorMove 0.75s steps(6, end) 0.1s forwards,
+        cursorBlink 0.45s step-end 0.1s 3;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to   { width: 42px; }
+    }
+
+    @keyframes cursorMove {
+      0%   { transform: translateX(0px); opacity: 1; }
+      99%  { opacity: 1; }
+      100% { transform: translateX(42px); opacity: 0; }
+    }
+
+    @keyframes cursorBlink {
+      0%, 100% { opacity: 1; }
+      50%      { opacity: 0; }
+    }
+
+    /* 2. goku-devil Pixel Swarm Animation (White Only) */
+    .px {
+      fill: #00ff00;
+      opacity: 0;
+      transform: translate(var(--dx), var(--dy));
+      animation: swarmIn 1.35s cubic-bezier(0.16, 1, 0.3, 1) var(--d, 0.7s) forwards;
+    }
+
+    @keyframes swarmIn {
+      0% {
+        opacity: 0;
+        transform: translate(var(--dx), var(--dy));
+      }
+      15% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 1;
+        transform: translate(0px, 0px);
+      }
+    }
+  </style>
+
+  
+  <g clip-path="url(#typing-clip)">
+    <path d="M6.13928e-06 11.28L4.26001 -9.05991e-06H5.40001L1.14001 11.28H6.13928e-06ZM7.39932 9.95999V1.19999H8.47932V3.35999V4.61999H8.70732L8.47932 4.87199C8.47932 4.35199 8.63532 3.95199 8.94732 3.67199C9.25932 3.38399 9.69132 3.23999 10.2433 3.23999C10.9073 3.23999 11.4353 3.44399 11.8273 3.85199C12.2193 4.25999 12.4153 4.81599 12.4153 5.51999V9.95999H11.3353V5.63999C11.3353 5.16799 11.2073 4.80399 10.9513 4.54799C10.7033 4.28399 10.3633 4.15199 9.93132 4.15199C9.48332 4.15199 9.12732 4.29199 8.86332 4.57199C8.60732 4.85199 8.47932 5.24799 8.47932 5.75999V9.95999H7.39932ZM17.0906 10.056C16.5626 10.056 16.1066 9.95599 15.7226 9.75599C15.3386 9.55599 15.0386 9.26799 14.8226 8.89199C14.6146 8.50799 14.5106 8.05599 14.5106 7.53599V5.78399C14.5106 5.25599 14.6146 4.80399 14.8226 4.42799C15.0386 4.05199 15.3386 3.76399 15.7226 3.56399C16.1066 3.36399 16.5626 3.26399 17.0906 3.26399C17.6186 3.26399 18.0746 3.36399 18.4586 3.56399C18.8426 3.76399 19.1386 4.05199 19.3466 4.42799C19.5626 4.80399 19.6706 5.25199 19.6706 5.77199V7.53599C19.6706 8.05599 19.5626 8.50799 19.3466 8.89199C19.1386 9.26799 18.8426 9.55599 18.4586 9.75599C18.0746 9.95599 17.6186 10.056 17.0906 10.056ZM17.0906 9.09599C17.5626 9.09599 17.9306 8.96399 18.1946 8.69999C18.4586 8.43599 18.5906 8.04799 18.5906 7.53599V5.78399C18.5906 5.27199 18.4586 4.88399 18.1946 4.61999C17.9306 4.35599 17.5626 4.22399 17.0906 4.22399C16.6266 4.22399 16.2586 4.35599 15.9866 4.61999C15.7226 4.88399 15.5906 5.27199 15.5906 5.78399V7.53599C15.5906 8.04799 15.7226 8.43599 15.9866 8.69999C16.2586 8.96399 16.6266 9.09599 17.0906 9.09599ZM21.4779 9.95999V3.35999H22.4259V4.15199H22.6419L22.4739 4.43999C22.4739 4.07199 22.5699 3.77999 22.7619 3.56399C22.9619 3.34799 23.2299 3.23999 23.5659 3.23999C23.9339 3.23999 24.2179 3.37599 24.4179 3.64799C24.6179 3.91999 24.7179 4.30399 24.7179 4.79999L24.3939 4.15199H24.8979L24.6699 4.43999C24.6699 4.07199 24.7699 3.77999 24.9699 3.56399C25.1779 3.34799 25.4499 3.23999 25.7859 3.23999C26.2019 3.23999 26.5219 3.39599 26.7459 3.70799C26.9779 4.01999 27.0939 4.43199 27.0939 4.94399V9.95999H26.0979V4.93199C26.0979 4.65999 26.0379 4.44799 25.9179 4.29599C25.8059 4.14399 25.6379 4.06799 25.4139 4.06799C25.1979 4.06799 25.0259 4.14399 24.8979 4.29599C24.7779 4.43999 24.7179 4.64799 24.7179 4.91999V9.95999H23.8539V4.93199C23.8539 4.65199 23.7899 4.43999 23.6619 4.29599C23.5419 4.14399 23.3699 4.06799 23.1459 4.06799C22.9219 4.06799 22.7539 4.14399 22.6419 4.29599C22.5299 4.43999 22.4739 4.64799 22.4739 4.91999V9.95999H21.4779ZM31.4813 10.08C30.9613 10.08 30.5053 9.97599 30.1133 9.76799C29.7293 9.55999 29.4293 9.26799 29.2133 8.89199C29.0053 8.50799 28.9013 8.06399 28.9013 7.55999V5.75999C28.9013 5.24799 29.0053 4.80399 29.2133 4.42799C29.4293 4.05199 29.7293 3.75999 30.1133 3.55199C30.5053 3.34399 30.9613 3.23999 31.4813 3.23999C32.0013 3.23999 32.4533 3.34399 32.8373 3.55199C33.2293 3.75999 33.5293 4.05199 33.7373 4.42799C33.9533 4.80399 34.0613 5.24799 34.0613 5.75999V6.92399H29.9573V7.55999C29.9573 8.07999 30.0893 8.47999 30.3533 8.75999C30.6173 9.03199 30.9933 9.16799 31.4813 9.16799C31.8973 9.16799 32.2333 9.09599 32.4893 8.95199C32.7453 8.79999 32.9013 8.57599 32.9573 8.27999H34.0373C33.9653 8.83199 33.6933 9.27199 33.2213 9.59999C32.7573 9.91999 32.1773 10.08 31.4813 10.08ZM33.0053 6.20399V5.75999C33.0053 5.23999 32.8733 4.83999 32.6093 4.55999C32.3533 4.27999 31.9773 4.13999 31.4813 4.13999C30.9933 4.13999 30.6173 4.27999 30.3533 4.55999C30.0893 4.83999 29.9573 5.23999 29.9573 5.75999V6.10799H33.0893L33.0053 6.20399ZM35.9766 11.28L40.2366 -9.05991e-06H41.3766L37.1166 11.28H35.9766Z" fill="white" />
+  </g>
+  <rect class="cursor" x="0" y="1" width="1.2" height="10" fill="white" />
+
+  
+  <g>
+    
+    <rect class="px" x="45.27" y="2.46" width="1.5" height="1.5" style="--dx:-14px;--dy:-12px;--d:0.65s" />
+    <rect class="px" x="46.77" y="2.46" width="1.5" height="1.5" style="--dx:6px;--dy:-15px;--d:0.78s" />
+    <rect class="px" x="48.27" y="2.46" width="1.5" height="1.5" style="--dx:18px;--dy:-9px;--d:0.70s" />
+    <rect class="px" x="43.77" y="3.96" width="1.5" height="1.5" style="--dx:-20px;--dy:-6px;--d:0.82s" />
+    <rect class="px" x="43.77" y="5.46" width="1.5" height="1.5" style="--dx:-12px;--dy:11px;--d:0.68s" />
+    <rect class="px" x="43.77" y="6.96" width="1.5" height="1.5" style="--dx:-16px;--dy:16px;--d:0.85s" />
+    <rect class="px" x="46.77" y="5.46" width="1.5" height="1.5" style="--dx:10px;--dy:-11px;--d:0.90s" />
+    <rect class="px" x="48.27" y="5.46" width="1.5" height="1.5" style="--dx:14px;--dy:13px;--d:0.74s" />
+    <rect class="px" x="48.27" y="6.96" width="1.5" height="1.5" style="--dx:4px;--dy:18px;--d:0.88s" />
+    <rect class="px" x="45.27" y="8.46" width="1.5" height="1.5" style="--dx:-8px;--dy:14px;--d:0.72s" />
+    <rect class="px" x="46.77" y="8.46" width="1.5" height="1.5" style="--dx:12px;--dy:17px;--d:0.80s" />
+
+    
+    <rect class="px" x="54.27" y="2.46" width="1.5" height="1.5" style="--dx:-9px;--dy:-16px;--d:0.76s" />
+    <rect class="px" x="55.77" y="2.46" width="1.5" height="1.5" style="--dx:15px;--dy:-13px;--d:0.66s" />
+    <rect class="px" x="52.77" y="3.96" width="1.5" height="1.5" style="--dx:-18px;--dy:-8px;--d:0.84s" />
+    <rect class="px" x="52.77" y="5.46" width="1.5" height="1.5" style="--dx:-11px;--dy:9px;--d:0.70s" />
+    <rect class="px" x="52.77" y="6.96" width="1.5" height="1.5" style="--dx:-15px;--dy:15px;--d:0.89s" />
+    <rect class="px" x="57.27" y="3.96" width="1.5" height="1.5" style="--dx:19px;--dy:-10px;--d:0.73s" />
+    <rect class="px" x="57.27" y="5.46" width="1.5" height="1.5" style="--dx:8px;--dy:12px;--d:0.81s" />
+    <rect class="px" x="57.27" y="6.96" width="1.5" height="1.5" style="--dx:14px;--dy:16px;--d:0.69s" />
+    <rect class="px" x="54.27" y="8.46" width="1.5" height="1.5" style="--dx:-6px;--dy:18px;--d:0.86s" />
+    <rect class="px" x="55.77" y="8.46" width="1.5" height="1.5" style="--dx:11px;--dy:13px;--d:0.75s" />
+
+    
+    <rect class="px" x="61.77" y="2.46" width="1.5" height="1.5" style="--dx:-12px;--dy:-14px;--d:0.79s" />
+    <rect class="px" x="61.77" y="3.96" width="1.5" height="1.5" style="--dx:7px;--dy:-16px;--d:0.67s" />
+    <rect class="px" x="61.77" y="5.46" width="1.5" height="1.5" style="--dx:-17px;--dy:8px;--d:0.83s" />
+    <rect class="px" x="61.77" y="6.96" width="1.5" height="1.5" style="--dx:-9px;--dy:17px;--d:0.71s" />
+    <rect class="px" x="61.77" y="8.46" width="1.5" height="1.5" style="--dx:-14px;--dy:14px;--d:0.91s" />
+    <rect class="px" x="66.27" y="2.46" width="1.5" height="1.5" style="--dx:16px;--dy:-15px;--d:0.74s" />
+    <rect class="px" x="64.77" y="3.96" width="1.5" height="1.5" style="--dx:11px;--dy:-10px;--d:0.87s" />
+    <rect class="px" x="63.27" y="5.46" width="1.5" height="1.5" style="--dx:5px;--dy:15px;--d:0.77s" />
+    <rect class="px" x="64.77" y="6.96" width="1.5" height="1.5" style="--dx:18px;--dy:11px;--d:0.68s" />
+    <rect class="px" x="66.27" y="8.46" width="1.5" height="1.5" style="--dx:13px;--dy:18px;--d:0.85s" />
+
+    
+    <rect class="px" x="70.77" y="2.46" width="1.5" height="1.5" style="--dx:-15px;--dy:-13px;--d:0.72s" />
+    <rect class="px" x="70.77" y="3.96" width="1.5" height="1.5" style="--dx:-8px;--dy:-16px;--d:0.88s" />
+    <rect class="px" x="70.77" y="5.46" width="1.5" height="1.5" style="--dx:-19px;--dy:10px;--d:0.76s" />
+    <rect class="px" x="70.77" y="6.96" width="1.5" height="1.5" style="--dx:-10px;--dy:16px;--d:0.69s" />
+    <rect class="px" x="72.27" y="8.46" width="1.5" height="1.5" style="--dx:-4px;--dy:18px;--d:0.82s" />
+    <rect class="px" x="73.77" y="8.46" width="1.5" height="1.5" style="--dx:9px;--dy:15px;--d:0.75s" />
+    <rect class="px" x="75.27" y="2.46" width="1.5" height="1.5" style="--dx:14px;--dy:-14px;--d:0.84s" />
+    <rect class="px" x="75.27" y="3.96" width="1.5" height="1.5" style="--dx:18px;--dy:-9px;--d:0.70s" />
+    <rect class="px" x="75.27" y="5.46" width="1.5" height="1.5" style="--dx:11px;--dy:12px;--d:0.90s" />
+    <rect class="px" x="75.27" y="6.96" width="1.5" height="1.5" style="--dx:16px;--dy:17px;--d:0.78s" />
+
+    
+    <rect class="px" x="79.77" y="5.46" width="1.5" height="1.5" style="--dx:-13px;--dy:-12px;--d:0.81s" />
+    <rect class="px" x="81.27" y="5.46" width="1.5" height="1.5" style="--dx:4px;--dy:14px;--d:0.73s" />
+    <rect class="px" x="82.77" y="5.46" width="1.5" height="1.5" style="--dx:15px;--dy:-14px;--d:0.86s" />
+
+    
+    <rect class="px" x="87.27" y="2.46" width="1.5" height="1.5" style="--dx:-11px;--dy:-15px;--d:0.68s" />
+    <rect class="px" x="87.27" y="3.96" width="1.5" height="1.5" style="--dx:-17px;--dy:-7px;--d:0.83s" />
+    <rect class="px" x="87.27" y="5.46" width="1.5" height="1.5" style="--dx:-9px;--dy:13px;--d:0.74s" />
+    <rect class="px" x="87.27" y="6.96" width="1.5" height="1.5" style="--dx:-14px;--dy:17px;--d:0.89s" />
+    <rect class="px" x="87.27" y="8.46" width="1.5" height="1.5" style="--dx:-6px;--dy:15px;--d:0.71s" />
+    <rect class="px" x="88.77" y="2.46" width="1.5" height="1.5" style="--dx:8px;--dy:-16px;--d:0.80s" />
+    <rect class="px" x="90.27" y="2.46" width="1.5" height="1.5" style="--dx:15px;--dy:-12px;--d:0.67s" />
+    <rect class="px" x="91.77" y="3.96" width="1.5" height="1.5" style="--dx:19px;--dy:-8px;--d:0.85s" />
+    <rect class="px" x="91.77" y="5.46" width="1.5" height="1.5" style="--dx:12px;--dy:11px;--d:0.76s" />
+    <rect class="px" x="91.77" y="6.96" width="1.5" height="1.5" style="--dx:17px;--dy:16px;--d:0.92s" />
+    <rect class="px" x="88.77" y="8.46" width="1.5" height="1.5" style="--dx:5px;--dy:18px;--d:0.72s" />
+    <rect class="px" x="90.27" y="8.46" width="1.5" height="1.5" style="--dx:13px;--dy:14px;--d:0.84s" />
+
+    
+    <rect class="px" x="96.27" y="2.46" width="1.5" height="1.5" style="--dx:-13px;--dy:-14px;--d:0.77s" />
+    <rect class="px" x="96.27" y="3.96" width="1.5" height="1.5" style="--dx:-8px;--dy:-11px;--d:0.69s" />
+    <rect class="px" x="96.27" y="5.46" width="1.5" height="1.5" style="--dx:-16px;--dy:9px;--d:0.87s" />
+    <rect class="px" x="96.27" y="6.96" width="1.5" height="1.5" style="--dx:-10px;--dy:16px;--d:0.75s" />
+    <rect class="px" x="96.27" y="8.46" width="1.5" height="1.5" style="--dx:-15px;--dy:13px;--d:0.82s" />
+    <rect class="px" x="97.77" y="2.46" width="1.5" height="1.5" style="--dx:7px;--dy:-16px;--d:0.71s" />
+    <rect class="px" x="99.27" y="2.46" width="1.5" height="1.5" style="--dx:16px;--dy:-13px;--d:0.88s" />
+    <rect class="px" x="97.77" y="5.46" width="1.5" height="1.5" style="--dx:11px;--dy:-9px;--d:0.79s" />
+    <rect class="px" x="99.27" y="5.46" width="1.5" height="1.5" style="--dx:18px;--dy:12px;--d:0.66s" />
+    <rect class="px" x="97.77" y="8.46" width="1.5" height="1.5" style="--dx:4px;--dy:17px;--d:0.84s" />
+    <rect class="px" x="99.27" y="8.46" width="1.5" height="1.5" style="--dx:14px;--dy:15px;--d:0.73s" />
+
+    
+    <rect class="px" x="103.77" y="2.46" width="1.5" height="1.5" style="--dx:-14px;--dy:-15px;--d:0.80s" />
+    <rect class="px" x="103.77" y="3.96" width="1.5" height="1.5" style="--dx:-9px;--dy:-10px;--d:0.70s" />
+    <rect class="px" x="105.27" y="5.46" width="1.5" height="1.5" style="--dx:-15px;--dy:11px;--d:0.86s" />
+    <rect class="px" x="105.27" y="6.96" width="1.5" height="1.5" style="--dx:-7px;--dy:17px;--d:0.74s" />
+    <rect class="px" x="106.77" y="8.46" width="1.5" height="1.5" style="--dx:3px;--dy:19px;--d:0.91s" />
+    <rect class="px" x="108.27" y="5.46" width="1.5" height="1.5" style="--dx:12px;--dy:13px;--d:0.72s" />
+    <rect class="px" x="108.27" y="6.96" width="1.5" height="1.5" style="--dx:16px;--dy:16px;--d:0.83s" />
+    <rect class="px" x="109.77" y="2.46" width="1.5" height="1.5" style="--dx:14px;--dy:-16px;--d:0.68s" />
+    <rect class="px" x="109.77" y="3.96" width="1.5" height="1.5" style="--dx:18px;--dy:-11px;--d:0.85s" />
+
+    
+    <rect class="px" x="114.27" y="2.46" width="1.5" height="1.5" style="--dx:-10px;--dy:-16px;--d:0.76s" />
+    <rect class="px" x="114.27" y="3.96" width="1.5" height="1.5" style="--dx:9px;--dy:-13px;--d:0.89s" />
+    <rect class="px" x="114.27" y="5.46" width="1.5" height="1.5" style="--dx:-12px;--dy:10px;--d:0.71s" />
+    <rect class="px" x="114.27" y="6.96" width="1.5" height="1.5" style="--dx:11px;--dy:15px;--d:0.82s" />
+    <rect class="px" x="114.27" y="8.46" width="1.5" height="1.5" style="--dx:-6px;--dy:18px;--d:0.78s" />
+
+    
+    <rect class="px" x="118.77" y="2.46" width="1.5" height="1.5" style="--dx:-11px;--dy:-14px;--d:0.73s" />
+    <rect class="px" x="118.77" y="3.96" width="1.5" height="1.5" style="--dx:8px;--dy:-15px;--d:0.87s" />
+    <rect class="px" x="118.77" y="5.46" width="1.5" height="1.5" style="--dx:-13px;--dy:12px;--d:0.69s" />
+    <rect class="px" x="118.77" y="6.96" width="1.5" height="1.5" style="--dx:10px;--dy:16px;--d:0.84s" />
+    <rect class="px" x="118.77" y="8.46" width="1.5" height="1.5" style="--dx:-8px;--dy:17px;--d:0.75s" />
+    <rect class="px" x="120.27" y="8.46" width="1.5" height="1.5" style="--dx:6px;--dy:14px;--d:0.90s" />
+    <rect class="px" x="121.77" y="8.46" width="1.5" height="1.5" style="--dx:14px;--dy:18px;--d:0.81s" />
+  </g>
+</svg>
