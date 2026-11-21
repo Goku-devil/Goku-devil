@@ -1,4 +1,4 @@
-<div class="main">
+<div class="main" style=" background-color: black">
   <img src="./assets/hero.svg" alt="Goku-devil">
 </div>
 
