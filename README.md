@@ -1,12 +1,4 @@
-<div class="main" style=" background-color: black">
+<div style="display:flex; justify-content: space-between; align-items: center; gap:8px">
   <img src="./assets/hero.svg" alt="Goku-devil">
+  <img src="./assets/devil.svg" height=35 width=35 alt="Devil">
 </div>
-
-<style>
-    .main{
-        background-color: black;
-    }
-    img{
-        margin-left: 10%;
-    }
-</style>
